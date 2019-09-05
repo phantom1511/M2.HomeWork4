@@ -1,54 +1,54 @@
 public class Runner extends Thread {
-    String name2;
 
-    public String getName2() {
-        return name2;
-    }
-
-    public Runner(String name, String name2) {
+    public Runner(String name) {
         super(name);
-        this.name2 = name2;
     }
 
     public void run() {
-        System.out.println(this.getName() + " берет палочку");
-        try {
-            sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(this.getName() + " бежит к " + name2);
+        Runner runner1 = new Runner("Runner 1 ");
+        Runner runner2 = new Runner("Runner 2");
+        Runner runner3 = new Runner("Runner 3");
+        Runner runner4 = new Runner("Runner 4");
+        Runner runner5 = new Runner("Runner 5");
 
-        /*System.out.println("Runner 2 берет палочку");
+        System.out.println(runner1.getName() + " берет палочку");
         try {
             sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Runner 2 бежит к Runner 3");
+        System.out.println(runner1.getName() + " бежит к " + runner2.getName());
 
-        System.out.println("Runner 3 берет палочку");
+        System.out.println(runner2.getName() + " берет палочку");
         try {
             sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Runner 3 бежит к Runner 4");
+        System.out.println(runner2.getName() + " бежит к " + runner3.getName());
 
-        System.out.println("Runner 4 берет палочку");
+        System.out.println(runner3.getName() + " берет палочку");
         try {
             sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Runner 4 бежит к Runner 5");
+        System.out.println(runner3.getName() + " бежит к " + runner4.getName());
 
-        System.out.println("Runner 5 берет палочку");
+        System.out.println(runner4.getName() + " берет палочку");
         try {
             sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Runner 5 бежит к Runner 1");*/
+        System.out.println(runner4.getName() + " бежит к " + runner5.getName());
+
+        System.out.println(runner5.getName() + " берет палочку");
+        try {
+            sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(runner5.getName() + " бежит к " + runner1.getName());
     }
 }
