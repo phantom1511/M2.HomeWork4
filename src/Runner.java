@@ -46,5 +46,6 @@ public class Runner extends Thread {
         } catch (InterruptedException ie) {
         }
         System.out.println(runner5.getName()+ " бежит к " + runner1.getName());
+        System.out.println(runner1.getName() + " берет палочку");
     }
 }
