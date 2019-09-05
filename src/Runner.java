@@ -35,19 +35,16 @@ public class Runner extends Thread {
 
             System.out.println(runner4.getName() + " берет палочку");
             System.out.println(runner4.getName() + " бежит к " + runner3.getName());
-            runner4.start();
             runner4.sleep(5000);
             runner4.join();
 
             System.out.println(runner3.getName() + " берет палочку");
             System.out.println(runner3.getName() + " бежит к " + runner2.getName());
-            runner3.start();
             runner3.sleep(5000);
             runner3.join();
 
             System.out.println(runner2.getName() + " берет палочку");
             System.out.println(runner2.getName() + " бежит к " + runner1.getName());
-            runner2.start();
             runner2.sleep(5000);
             runner2.join();
 
